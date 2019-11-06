@@ -1,0 +1,23 @@
+<html>
+<script>
+    $.getJSON("manufacturers", function (data) {
+        let table = $('<table id="manufacturersTable"></table>');
+        $(table).append('<tr><th>Name</th><th>Country</th><th>Founded</th></tr>');
+
+        $.each(data, function (key, value) {
+            let row = $("<tr></tr>");
+            let nameCell = $("<td id='manufacturersID' onclick=\"openManufacturer(" + "'" + value.name + "'" + ")\">" + value.name + "</td>");
+            let countryCell = $("<td>" + value.country + "</td>");
+            let foundedCell = $("<td>" + value.founded + "</td>");
+
+            $(row).append(nameCell);
+            $(row).append(countryCell);
+            $(row).append(foundedCell);
+            $(table).append(row);
+        });
+
+        $("#content").append(table);
+    });
+</script>
+</html>
+
