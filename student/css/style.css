@@ -2,7 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: url("wp.jpg") fixed center;
+    background: url("wp.jpg") fixed center no-repeat;
+    background-size: cover;
 }
 
 header {

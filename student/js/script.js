@@ -17,7 +17,7 @@ $(document).ready(function () {
     });
 });
 
-function kezelofuggveny() {
+function addManufacFv() {
     let form = $("#addManufacturersForm");
     form.submit(function func(event) {
         event.preventDefault();
@@ -35,7 +35,7 @@ function kezelofuggveny() {
     });
 }
 
-function kezelofuggvenyCar() {
+function addCarFv() {
     let form = $("#addCarsForm");
     form.submit(function func(event) {
         event.preventDefault();
@@ -51,8 +51,8 @@ function kezelofuggvenyCar() {
 
         $.post(url, {
             name: name,
-            manufacturer: country,
-            consumption: founded,
+            manufacturer: manufacturer,
+            consumption: consumption,
             color: color,
             year: year,
             available: available,
